@@ -1,0 +1,21 @@
+<h3 style="color:aliceblue">{{viewTitle}}</h3>
+
+<form action="/hotdog" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{hotdog._id}}">
+    <div class="form-group">
+        <label style="color:aliceblue">Name</label>
+        <input type="text" class="form-control" name="Name" placeholder="hotdog name" value="{{hotdog.Name}}">
+                <div class="text-light">
+                    {{hotdog.NameError}}</div>
+                </div>
+    <div class="form-group">
+        <label style="color:aliceblue">ID</label>
+        <input type="text" class="form-control" name="ID" placeholder="hotdog identifier" value="{{hotdog.ID}}">
+                <div class="text-light">
+                    {{hotdog.IDError}}</div>
+                </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-secondary"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/hotdog/list"><i class="fa fa-list-alt"></i> View all</a>
+    </div>
+</form>
